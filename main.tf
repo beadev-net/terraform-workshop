@@ -6,7 +6,8 @@ terraform {
     }
   }
 
-  backend "azurerm" {}
+  backend local {}
+  # backend "azurerm" {}
 }
 
 provider "azurerm" {
@@ -29,9 +30,9 @@ resource "azurerm_storage_account" "my_storage_account" {
   
   tags = local.tags
 
-  lifecycle {
-    prevent_destroy = true
-  }
+  # lifecycle {
+  #   prevent_destroy = true
+  # }
 }
 
 resource "azurerm_storage_container" "my_container" {
