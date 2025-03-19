@@ -5,6 +5,8 @@
 ## Table of Contents
 - [Workshop](#workshop)
   - [Table of Contents](#table-of-contents)
+    - [VSCODE](#vscode)
+      - [Extensions](#extensions)
     - [Azure](#azure)
       - [Login](#login)
       - [List Subscriptions](#list-subscriptions)
@@ -27,6 +29,16 @@
       - [Graph](#graph)
     - [Logs](#logs)
       - [Enable](#enable)
+
+
+---
+
+### VSCODE
+
+#### Extensions
+- [Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=hashicorp.terraform)
+
+---
 
 ### Azure
 
