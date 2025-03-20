@@ -12,7 +12,7 @@ terraform {
 }
 
 provider "azurerm" {
-  subscription_id = "677253fa-9e72-4166-ac53-247de4fb2181"
+  subscription_id = ""
   features {}
 }
 
@@ -24,7 +24,7 @@ provider "azurerm" {
 
 # import {
 #   to = azurerm_virtual_network.existing_vnet
-#   id = "/subscriptions/677253fa-9e72-4166-ac53-247de4fb2181/resourceGroups/rsgmanualcreated/providers/Microsoft.Network/virtualNetworks/vntmanualcreated"
+#   id = ""
 # }
 
 # resource "azurerm_virtual_network" "existing_vnet" {

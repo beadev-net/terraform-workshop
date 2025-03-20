@@ -6,7 +6,7 @@ terraform {
     }
 
     random = {
-      source = "hashicorp/random"
+      source  = "hashicorp/random"
       version = "3.7.1"
     }
   }
@@ -16,21 +16,17 @@ terraform {
 
 provider "azurerm" {
   features {}
+  subscription_id = ""
 }
 
-provider "random" {}
-
-resource "random_string" "suffix" {
-  length  = 4
-  special = false
+data "azurerm_resource_group" "rg" {
+  name = "rsgdatasource"
 }
 
-resource "azurerm_resource_group" "rg" {
-  name     = "rg-terraform-${random_string.suffix.result}" 
-  location = "East US"
-}
-
-output "rg_name" {
-  value = azurerm_resource_group.rg.name
-  description = "The name of the resource group"
+resource "azurerm_storage_account" "my_storage_account" {
+  name                     = "stavinicius"
+  resource_group_name      = data.azurerm_resource_group.rg.name
+  location                 = data.azurerm_resource_group.rg.location
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
 }
