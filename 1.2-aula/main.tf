@@ -6,7 +6,7 @@ terraform {
     }
   }
 
-  backend local {}
+  backend "local" {}
   # backend "azurerm" {}
 }
 
@@ -27,7 +27,7 @@ resource "azurerm_storage_account" "my_storage_account" {
   location                 = azurerm_resource_group.my_rg.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
-  
+  #min_tls_version          = "TLS1_2"
   tags = local.tags
 
   # lifecycle {

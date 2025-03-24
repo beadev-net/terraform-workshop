@@ -1,20 +1,19 @@
 variable "env" {
   description = "The environment for the resources"
-  type = string
+  type        = string
 }
 
 variable "resource_group_name" {
-  description = "The name of the resource group"
-  type        = string
+  type    = string
+  default = "my-test-rg"
 }
 
 variable "location" {
-  description = "The location of the resource group and storage account"
-  type        = string
-  default     = "East US"
+  type    = string
+  default = "eastus"
 }
 
 variable "storage_account_name" {
-  description = "The name of the storage account"
-  type        = string
+  type    = string
+  default = "myteststorageacct1"
 }
