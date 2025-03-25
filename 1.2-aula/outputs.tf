@@ -11,5 +11,5 @@ output "storage_account_name" {
 output "storage_account_primary_access_key" {
   description = "The primary access key for the storage account"
   value       = azurerm_storage_account.my_storage_account.primary_access_key
-  sensitive   = true # Sabe me dizer?
+  sensitive   = true
 }

@@ -13,7 +13,9 @@ variable "location" {
   default = "eastus"
 }
 
-variable "storage_account_name" {
-  type    = string
-  default = "myteststorageacct1"
+variable "storage_account" {
+  type = object({
+    name            = string
+    min_tls_version = optional(string)
+  })
 }

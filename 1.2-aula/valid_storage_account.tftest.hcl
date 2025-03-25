@@ -20,7 +20,7 @@ run "storage_container_created" {
   command = plan
   
   assert {
-    condition     = azurerm_storage_container.my_container.name == "tfstate"
+    condition     = azurerm_storage_container.my_container.name == "vinicius"
     error_message = "Storage container was not created correctly."
   }
 }
